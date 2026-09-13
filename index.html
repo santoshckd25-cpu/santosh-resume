@@ -48,7 +48,7 @@ section{padding:35px 0}.grid2{display:grid;grid-template-columns:1fr 1.25fr;gap:
 let owner=false, currentImage='';
 function viewCert(src,title){currentImage=src;document.getElementById('modalImg').src=src;document.getElementById('modalImg').alt=title;document.getElementById('downloadArea').style.display=owner?'block':'none';document.getElementById('downloadLink').href=src;document.getElementById('downloadLink').download=title.replaceAll(' ','-')+'.png';document.getElementById('modal').style.display='block'}
 function closeModal(){document.getElementById('modal').style.display='none'}
-function unlockOwner(){const p=document.getElementById('ownerPin').value;if(p==='if(p==='2521'){owner=true;sessionStorage.setItem('ownerUnlocked','1');document.getElementById('ownerMsg').textContent='✅ Downloads enabled';}else document.getElementById('ownerMsg').textContent='❌ Incorrect PIN'}
+function unlockOwner(){const p=document.getElementById('ownerPin').value;if(p==='2521'){{owner=true;sessionStorage.setItem('ownerUnlocked','1');document.getElementById('ownerMsg').textContent='✅ Downloads enabled';}else document.getElementById('ownerMsg').textContent='❌ Incorrect PIN'}
 if(sessionStorage.getItem('ownerUnlocked')==='1') owner=true;
 </script>
 </body></html>
